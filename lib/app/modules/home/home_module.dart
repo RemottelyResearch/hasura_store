@@ -9,12 +9,7 @@ import '../../../app/modules/home/repositories/home_repository.dart';
 class HomeModule extends ChildModule {
   @override
   List<Bind> get binds => [
-        //Controllers
-
         Bind((i) => HomeController(i.get<HomeRepository>())),
-
-        //Repositories
-
         Bind((i) => HomeRepository(AppModule.to.get<HasuraConnect>())),
       ];
 

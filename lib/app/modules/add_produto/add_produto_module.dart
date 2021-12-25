@@ -9,10 +9,7 @@ import '../../modules/add_produto/repositories/add_produto_repository.dart';
 class AddProdutoModule extends ChildModule {
   @override
   List<Bind> get binds => [
-        //Controllers
         Bind((i) => AddProdutoController(i.get<AddProdutoRepository>())),
-
-        ///Repositories
         Bind((i) => AddProdutoRepository(AppModule.to.get<HasuraConnect>())),
       ];
 

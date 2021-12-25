@@ -1,7 +1,3 @@
-// To parse this JSON data, do
-//
-//     final produtoTipoCategoriaProdutoDto = produtoTipoCategoriaProdutoDtoFromJson(jsonString);
-
 import 'dart:convert';
 
 import '../../../../app/modules/add_produto/models/tipo_categoria_produto_dto.dart';

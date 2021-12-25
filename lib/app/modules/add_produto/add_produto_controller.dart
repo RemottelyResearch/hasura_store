@@ -5,7 +5,6 @@ import 'repositories/add_produto_repository.dart';
 
 part 'add_produto_controller.g.dart';
 
-///meu metodo faz x coisas
 class AddProdutoController = _AddProdutoBase with _$AddProdutoController;
 
 abstract class _AddProdutoBase with Store {

@@ -9,13 +9,10 @@ import 'repositories/update_produto_repository.dart';
 class UpdateProdutoModule extends ChildModule {
   @override
   List<Bind> get binds => [
-        /// Controllers
         Bind(
             (i) => UpdateProdutoController(
                 i.get<UpdateProdutoRepository>(), i.params["id"]),
             singleton: false),
-
-        ///Repositories
         Bind((i) => UpdateProdutoRepository(AppModule.to.get<HasuraConnect>())),
       ];
 

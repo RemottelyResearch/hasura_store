@@ -7,11 +7,9 @@ class MockClient extends Mock implements Dio {}
 
 void main() {
   AddProdutoRepository repository;
-  // MockClient client;
 
   setUp(() {
     repository = AddProdutoRepository(null);
-    //  client = MockClient();
   });
 
   group('AddProdutoRepository Test', () {

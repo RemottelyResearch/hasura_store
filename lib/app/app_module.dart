@@ -17,7 +17,6 @@ class AppModule extends MainModule {
   List<Bind> get binds => [
         Bind((i) => CustomComboboxController()),
         Bind((i) => AppController()),
-        // Others
         Bind((i) => CustomHasuraConnect.getConnect(i.get<FirebaseAuth>())),
         Bind((i) => FirebaseAuth.instance),
       ];
