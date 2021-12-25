@@ -13,6 +13,7 @@ import 'modules/auth/auth_module.dart';
 import 'modules/splash/splash_module.dart';
 import 'modules/update_produto/repositories/update_produto_repository.dart';
 import 'modules/update_produto/update_produto_controller.dart';
+import 'modules/update_produto/update_produto_module.dart';
 import 'modules/update_produto/update_produto_page.dart';
 
 class AppModule extends MainModule {
@@ -25,13 +26,13 @@ class AppModule extends MainModule {
         Bind((i) => FirebaseAuth.instance),
 
         // /// Update Product
-        Bind(
-            (i) => UpdateProdutoController(
-                i.get<UpdateProdutoRepository>(), i.params["id"]),
-            singleton: false),
+        // Bind(
+        //     (i) => UpdateProdutoController(
+        //         i.get<UpdateProdutoRepository>(), i.params["id"]),
+        //     singleton: false),
 
-        ///Repositories
-        Bind((i) => UpdateProdutoRepository(AppModule.to.get<HasuraConnect>())),
+        // ///Repositories
+        // Bind((i) => UpdateProdutoRepository(AppModule.to.get<HasuraConnect>())),
       ];
 
   @override
@@ -40,10 +41,7 @@ class AppModule extends MainModule {
         ModularRouter('/auth', module: AuthModule()),
         ModularRouter('/home', module: HomeModule()),
         ModularRouter('/add-produto', module: AddProdutoModule()),
-        ModularRouter('/update-produto/:id',
-            child: (_, args) => UpdateProdutoPage(
-                  id: args.params['id'],
-                )),
+        ModularRouter('/update-produto', module: UpdateProdutoModule()),
         // ModularRouter('/add-produto', module: AddProdutoModule()),
       ];
 

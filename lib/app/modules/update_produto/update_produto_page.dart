@@ -30,7 +30,7 @@ class _UpdateProdutoPageState extends State<UpdateProdutoPage> {
   UpdateProdutoController controller;
   @override
   void initState() {
-       controller = AppModule.to.get<UpdateProdutoController>(params: {"id": id});
+       controller = UpdateProdutoModule.to.get<UpdateProdutoController>(params: {"id": id});
     // controller = UpdateProdutoModule.to.get<UpdateProdutoController>(params: {"id": id});
     super.initState();
   }
