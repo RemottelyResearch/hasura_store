@@ -1,6 +1,6 @@
 import 'package:flutter_modular/flutter_modular_test.dart';
 import 'package:flutter_test/flutter_test.dart';
-import 'package:hasura_store/app/modules/home/widgets/card_produto/card_produto_widget.dart';
+import 'package:hasura_store/app/modules/home/widgets/card_produto_widget.dart';
 
 void main() {
   testWidgets('CardProdutoWidget has message', (tester) async {

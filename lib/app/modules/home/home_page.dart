@@ -2,11 +2,9 @@ import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_mobx/flutter_mobx.dart';
 import 'package:flutter_modular/flutter_modular.dart';
-import 'package:hasura_connect/hasura_connect.dart';
 
 import '../../../app/modules/home/home_controller.dart';
-import '../../../app/modules/home/home_module.dart';
-import 'widgets/card_produto/card_produto_widget.dart';
+import 'widgets/card_produto_widget.dart';
 
 class HomePage extends StatefulWidget {
   final String title;

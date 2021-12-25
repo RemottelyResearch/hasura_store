@@ -1,10 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:hasura_store/app/modules/add_produto/models/tipo_categoria_produto_dto.dart';
 import 'package:mobx/mobx.dart';
 
-// import '../../../../../app/modules/add_produto/models/tipo_categoria_produto_dto.dart';
-// import '../../../../../app/modules/home/models/produto_tipo_categoria_produto_dto.dart';
-// import '../../../../../app/modules/home/repositories/update_produto_repository.dart';
+import '../add_produto/models/tipo_categoria_produto_dto.dart';
+
 import 'models/produto_tipo_categoria_produto_dto.dart';
 import 'repositories/update_produto_repository.dart';
 
