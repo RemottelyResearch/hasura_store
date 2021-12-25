@@ -71,7 +71,7 @@ class _HomePageState extends ModularState<HomePage, HomeController> {
         ),
         floatingActionButton: FloatingActionButton(
           onPressed: () {
-            Modular.to.pushNamed("/AddProduto");
+            Modular.to.pushNamed("/add-produto");
           },
           child: Icon(
             Icons.add,

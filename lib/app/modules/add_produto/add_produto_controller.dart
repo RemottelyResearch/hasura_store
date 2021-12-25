@@ -106,7 +106,7 @@ abstract class _AddProdutoBase with Store {
     }
 
     if (isValid) {
-      return await addProdutoRepository.addproduto(
+      return await addProdutoRepository.addProduto(
           descricao, valor, selectedTipo.id, selectedCategoria.id);
     }
     return false;

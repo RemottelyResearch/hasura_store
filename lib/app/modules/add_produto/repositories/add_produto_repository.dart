@@ -27,7 +27,7 @@ class AddProdutoRepository extends Disposable {
     return TipoCategoriaProdutoDto.fromMap(snapshot["data"]);
   }
 
-  Future<bool> addproduto(String descricao, String valor, String selectedTipo,
+  Future<bool> addProduto(String descricao, String valor, String selectedTipo,
       String selectedCategoria) async {
     var mutation = r''' 
                   mutation addProduto($nome: String, $categoria: uuid, $tipo: uuid, $valor: float8) {

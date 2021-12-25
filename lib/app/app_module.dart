@@ -26,7 +26,7 @@ class AppModule extends MainModule {
         ModularRouter('/', module: SplashModule()),
         ModularRouter('/auth', module: AuthModule()),
         ModularRouter('/home', module: HomeModule()),
-        ModularRouter('/AddProduto', module: AddProdutoModule()),
+        ModularRouter('/add-produto', module: AddProdutoModule()),
       ];
 
   @override
