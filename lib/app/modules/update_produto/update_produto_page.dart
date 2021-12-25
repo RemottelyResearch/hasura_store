@@ -1,12 +1,18 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_mobx/flutter_mobx.dart';
 import 'package:flutter_modular/flutter_modular.dart';
+import 'package:hasura_store/app/modules/add_produto/models/tipo_categoria_produto_dto.dart';
+import '../../app_module.dart';
+import '../update_produto/update_produto_controller.dart';
+import 'package:hasura_store/app/modules/update_produto/update_produto_module.dart';
+import 'package:hasura_store/app/shared/custom_combobox/custom_combobox_widget.dart';
+import 'package:hasura_store/app/shared/widgets/label/label_widget.dart';
 
-import '../../../../../app/shared/widgets/label/label_widget.dart';
-import '../../../../modules/add_produto/models/tipo_categoria_produto_dto.dart';
-import '../../../../modules/home/pages/update_produto/update_produto_controller.dart';
-import '../../../../shared/custom_combobox/custom_combobox_widget.dart';
-import '../../home_module.dart';
+// import '../../../../../app/shared/widgets/label/label_widget.dart';
+// import '../../../../modules/add_produto/models/tipo_categoria_produto_dto.dart';
+// import '../../../modules/update_produto/update_produto_controller.dart';
+// import '../../../../shared/custom_combobox/custom_combobox_widget.dart';
+// import '../../home_module.dart';
 
 class UpdateProdutoPage extends StatefulWidget {
   final String id;
@@ -24,7 +30,8 @@ class _UpdateProdutoPageState extends State<UpdateProdutoPage> {
   UpdateProdutoController controller;
   @override
   void initState() {
-    controller = HomeModule.to.get<UpdateProdutoController>(params: {"id": id});
+       controller = AppModule.to.get<UpdateProdutoController>(params: {"id": id});
+    // controller = UpdateProdutoModule.to.get<UpdateProdutoController>(params: {"id": id});
     super.initState();
   }
 

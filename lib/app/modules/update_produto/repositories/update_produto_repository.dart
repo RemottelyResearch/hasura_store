@@ -1,7 +1,8 @@
 import 'package:flutter_modular/flutter_modular.dart';
 import 'package:hasura_connect/hasura_connect.dart';
+import 'package:hasura_store/app/modules/update_produto/models/produto_tipo_categoria_produto_dto.dart';
 
-import '../../../../app/modules/home/models/produto_tipo_categoria_produto_dto.dart';
+// import '../../home/models/produto_tipo_categoria_produto_dto.dart';
 
 class UpdateProdutoRepository extends Disposable {
   final HasuraConnect _hasuraConnect;
