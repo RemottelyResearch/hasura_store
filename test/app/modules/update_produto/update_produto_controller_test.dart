@@ -1,10 +1,11 @@
 import 'package:flutter_modular/flutter_modular_test.dart';
 import 'package:flutter_test/flutter_test.dart';
+import 'package:hasura_store/app/app_module.dart';
 import 'package:hasura_store/app/modules/home/home_module.dart';
-import 'package:hasura_store/app/modules/home/pages/update_produto/update_produto_controller.dart';
+import 'package:hasura_store/app/modules/update_produto/update_produto_controller.dart';
 
 void main() {
-  initModule(HomeModule());
+  initModule(AppModule());
   UpdateProdutoController updateproduto;
 
   setUp(() {
