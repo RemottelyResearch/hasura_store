@@ -62,8 +62,7 @@ abstract class _RegisterBase with Store {
     final user = (await _auth.createUserWithEmailAndPassword(
       email: email,
       password: senha,
-    ))
-        .user;
+    )).user;
 
     var tokenId = await user.getIdToken();
     valid = tokenId != null;

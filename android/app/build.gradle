@@ -38,7 +38,7 @@ android {
 
     defaultConfig {
         
-        applicationId "br.com.hasura_store"
+        applicationId "com.remottely.nextlov"
         minSdkVersion 21
         targetSdkVersion 28
         versionCode flutterVersionCode.toInteger()
@@ -72,8 +72,10 @@ dependencies {
     androidTestImplementation 'androidx.test:runner:1.1.1'
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.1.1'
     implementation 'com.android.support:multidex:1.0.3'
-    implementation 'com.google.firebase:firebase-analytics:17.2.0'
+    // implementation 'com.google.firebase:firebase-analytics:17.2.0'
     implementation 'com.google.android.gms:play-services-location:16.0.0'
+    implementation platform('com.google.firebase:firebase-bom:29.0.3')
+    implementation 'com.google.firebase:firebase-analytics'
 }
 
 

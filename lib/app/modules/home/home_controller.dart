@@ -14,7 +14,7 @@ abstract class _HomeBase with Store implements Disposable {
   final HomeRepository _repository;
 
   @observable
-  Snapshot<List<ProdutoModel>> snapshot;
+  Snapshot<List<UserModel>> snapshot;
 
   _HomeBase(this._repository) {
     getData();
@@ -25,7 +25,7 @@ abstract class _HomeBase with Store implements Disposable {
   }
 
   @computed
-  ObservableStream<List<ProdutoModel>> get listaProdutos =>
+  ObservableStream<List<UserModel>> get listaProdutos =>
       snapshot?.asObservable();
 
   @override

@@ -48,20 +48,16 @@ class _HomePageState extends ModularState<HomePage, HomeController> {
             }
 
             controller.listaProdutos.value.sort((produto1, produto2) => produto1
-                .nome
+                .name
                 .toLowerCase()
-                .compareTo(produto2.nome.toLowerCase()));
+                .compareTo(produto2.name.toLowerCase()));
             return ListView.builder(
               itemCount: controller.listaProdutos.value.length,
               itemBuilder: (context, index) {
-                return CardProdutoWidget(
-                  nomeProduto: controller.listaProdutos.value[index].nome,
-                  valor: controller.listaProdutos.value[index].valor.toString(),
-                  categoriaProduto: controller
-                      .listaProdutos.value[index].categoriaProduto.descricao,
-                  tipoProduto: controller
-                      .listaProdutos.value[index].tipoProduto.descricao,
-                  idProduto: controller.listaProdutos.value[index].id,
+                return UserCardWidget(
+                  userId: controller.listaProdutos.value[index].id,
+                  userName: controller.listaProdutos.value[index].name,
+                  userEmail: controller.listaProdutos.value[index].email, 
                 );
               },
             );

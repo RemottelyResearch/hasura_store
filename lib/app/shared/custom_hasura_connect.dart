@@ -6,7 +6,7 @@ import 'package:hive_cache_interceptor/hive_cache_interceptor.dart';
 class CustomHasuraConnect {
   static HasuraConnect getConnect(FirebaseAuth auth) {
     return HasuraConnect(
-      "https://loja-hasura.herokuapp.com/v1/graphql",
+      "https://nextlov.hasura.app/v1/graphql",
       interceptors: [
         TokenInterceptor(auth),
         LogInterceptor(),

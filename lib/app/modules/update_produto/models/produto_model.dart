@@ -1,13 +1,13 @@
 import 'dart:convert';
 
-class ProdutoModel {
+class UserModel {
   final String id;
   final String nome;
   final double valor;
   final TipoOuCategoriaDto tipoProduto;
   final TipoOuCategoriaDto categoriaProduto;
 
-  ProdutoModel({
+  UserModel({
     this.id,
     this.nome,
     this.valor,
@@ -15,14 +15,14 @@ class ProdutoModel {
     this.categoriaProduto,
   });
 
-  ProdutoModel copyWith({
+  UserModel copyWith({
     String id,
     String nome,
     int valor,
     TipoOuCategoriaDto tipoProduto,
     TipoOuCategoriaDto categoriaProduto,
   }) =>
-      ProdutoModel(
+      UserModel(
         id: id ?? this.id,
         nome: nome ?? this.nome,
         valor: valor ?? this.valor,
@@ -30,12 +30,12 @@ class ProdutoModel {
         categoriaProduto: categoriaProduto ?? this.categoriaProduto,
       );
 
-  factory ProdutoModel.fromJson(String str) =>
-      ProdutoModel.fromMap(json.decode(str));
+  factory UserModel.fromJson(String str) =>
+      UserModel.fromMap(json.decode(str));
 
   String toJson() => json.encode(toMap());
 
-  factory ProdutoModel.fromMap(Map<String, dynamic> json) => ProdutoModel(
+  factory UserModel.fromMap(Map<String, dynamic> json) => UserModel(
         id: json["id"],
         nome: json["nome"],
         valor: json["valor"].toDouble(),
@@ -55,11 +55,11 @@ class ProdutoModel {
         "categoria_produto": categoriaProduto.toMap(),
       };
 
-  static List<ProdutoModel> fromJsonList(List list) {
+  static List<UserModel> fromJsonList(List list) {
     if (list == null) return null;
     return list
         .map((item) => item.cast<String, dynamic>())
-        .map<ProdutoModel>((item) => ProdutoModel.fromMap(item))
+        .map<UserModel>((item) => UserModel.fromMap(item))
         .toList();
   }
 }

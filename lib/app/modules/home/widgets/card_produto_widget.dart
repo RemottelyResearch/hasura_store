@@ -1,27 +1,27 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_modular/flutter_modular.dart';
 
-class CardProdutoWidget extends StatelessWidget {
-  final String nomeProduto;
-  final String categoriaProduto;
-  final String tipoProduto;
-  final String valor;
-  final String idProduto;
+class UserCardWidget extends StatelessWidget {
+  final String userName;
+  // final String categoriaProduto;
+  // final String tipoProduto;
+  final String userEmail;
+  final String userId;
 
-  const CardProdutoWidget(
+  const UserCardWidget(
       {Key key,
-      @required this.nomeProduto,
-      @required this.categoriaProduto,
-      @required this.tipoProduto,
-      @required this.valor,
-      @required this.idProduto})
+      @required this.userName,
+      // @required this.categoriaProduto,
+      // @required this.tipoProduto,
+      @required this.userEmail,
+      @required this.userId})
       : super(key: key);
 
   @override
   Widget build(BuildContext context) {
     return GestureDetector(
       onTap: () {
-        Modular.to.pushNamed('/update-produto/$idProduto');
+        Modular.to.pushNamed('/update-produto/$userId');
       },
       child: Card(
         child: Stack(
@@ -56,7 +56,7 @@ class CardProdutoWidget extends StatelessWidget {
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: <Widget>[
-                  Text(nomeProduto,
+                  Text(userName,
                       style: TextStyle(
                         color: Colors.black,
                         fontSize: 30,
@@ -65,23 +65,23 @@ class CardProdutoWidget extends StatelessWidget {
                   SizedBox(
                     height: 10,
                   ),
-                  Text(categoriaProduto,
-                      style: TextStyle(color: Colors.black, fontSize: 18)),
-                  Row(
-                    children: <Widget>[
-                      Expanded(
-                          child: Text(tipoProduto,
-                              style: TextStyle(
-                                  color: Colors.black, fontSize: 18))),
+                  // Text(categoriaProduto,
+                  //     style: TextStyle(color: Colors.black, fontSize: 18)),
+                  // Row(
+                  //   children: <Widget>[
+                  //     Expanded(
+                  //         child: Text(tipoProduto,
+                  //             style: TextStyle(
+                  //                 color: Colors.black, fontSize: 18))),
                       Text(
-                        "R\$ ${double.parse(valor).toStringAsFixed(2).replaceAll('.', ',')}",
+                        userEmail,
                         style: TextStyle(
                             color: Colors.white,
                             fontSize: 30,
                             fontWeight: FontWeight.bold),
                       ),
-                    ],
-                  ),
+                  //   ],
+                  // ),
                 ],
               ),
             ),

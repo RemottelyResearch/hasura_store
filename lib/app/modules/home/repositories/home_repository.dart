@@ -8,21 +8,16 @@ class HomeRepository extends Disposable {
 
   HomeRepository(this._hasuraConnect);
 
-  Future<Snapshot<List<ProdutoModel>>> getProduto() async {
+  Future<Snapshot<List<UserModel>>> getProduto() async {
     var query = '''
-              subscription getProdutos {
-                produto {
-                  id
-                  nome
-                  valor
-                  tipo_produto {
-                    descricao
-                  }    
-                  categoria_produto {
-                    descricao
-                  }    
-                }
-              }''';
+             subscription getUsers {
+  user {
+    id,
+    name,
+    email
+  }
+}
+    ''';
 
     var snapshot = await _hasuraConnect.subscription(query);
 
@@ -30,7 +25,7 @@ class HomeRepository extends Disposable {
       if (data == null) {
         return null;
       }
-      return ProdutoModel.fromJsonList(data["data"]["produto"]);
+      return UserModel.fromJsonList(data["data"]["user"]);
     });
   }
 

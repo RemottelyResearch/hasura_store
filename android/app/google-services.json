@@ -1,35 +1,41 @@
 {
   "project_info": {
-    "project_number": "510123339694",
-    "firebase_url": "https://loja-hasura.firebaseio.com",
-    "project_id": "loja-hasura",
-    "storage_bucket": "loja-hasura.appspot.com"
+    "project_number": "999013355181",
+    "project_id": "remottely-nextlov",
+    "storage_bucket": "remottely-nextlov.appspot.com"
   },
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:510123339694:android:df14f2f4d1849f2df9a23f",
+        "mobilesdk_app_id": "1:999013355181:android:3f128c244512931b75c024",
         "android_client_info": {
-          "package_name": "br.com.hasura_store"
+          "package_name": "com.remottely.nextlov"
         }
       },
       "oauth_client": [
         {
-          "client_id": "510123339694-695f8rf12fg38okv85n4rto4qm6ebl3i.apps.googleusercontent.com",
+          "client_id": "999013355181-pkt02av21474i1d3qqe6sql9ajnfadid.apps.googleusercontent.com",
           "client_type": 3
         }
       ],
       "api_key": [
         {
-          "current_key": "AIzaSyCgWeX-uOyxBkvIHKfn9pNSdrFbg5GhpxY"
+          "current_key": "AIzaSyBEWyn4yyQ0XXavOoUcri5xFyaQArFvy8Y"
         }
       ],
       "services": {
         "appinvite_service": {
           "other_platform_oauth_client": [
             {
-              "client_id": "510123339694-695f8rf12fg38okv85n4rto4qm6ebl3i.apps.googleusercontent.com",
+              "client_id": "999013355181-pkt02av21474i1d3qqe6sql9ajnfadid.apps.googleusercontent.com",
               "client_type": 3
+            },
+            {
+              "client_id": "999013355181-a8cjh9pfmkp8616r6r3j8cl5vfvnun2d.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.example.nextlov"
+              }
             }
           ]
         }
