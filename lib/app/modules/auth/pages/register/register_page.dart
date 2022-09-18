@@ -137,8 +137,8 @@ class _RegisterPageState extends State<RegisterPage> {
                   ),
                   Container(
                     width: MediaQuery.of(context).size.width,
-                    child: RaisedButton(
-                      color: Theme.of(context).primaryColor,
+                    child: ElevatedButton(
+                      // color: Theme.of(context).primaryColor,
                       onPressed: () async {
                         var result = await controller.criarConta();
 
@@ -152,7 +152,7 @@ class _RegisterPageState extends State<RegisterPage> {
                                 content: Text(
                                     "Erro ao tentar efetuar o login! Tente novamente!"),
                                 actions: <Widget>[
-                                  FlatButton(
+                                  ElevatedButton(
                                     child: Text("Fechar"),
                                     onPressed: () {
                                       Modular.to.pop();

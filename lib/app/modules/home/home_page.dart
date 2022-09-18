@@ -86,14 +86,14 @@ class _HomePageState extends ModularState<HomePage, HomeController> {
             return AlertDialog(
               content: Text("Voce deseja mesmo sair?"),
               actions: <Widget>[
-                FlatButton(
+                ElevatedButton(
                   onPressed: () {
                     result = true;
                     Modular.to.pop();
                   },
                   child: Text("Sim"),
                 ),
-                FlatButton(
+                ElevatedButton(
                   onPressed: () {
                     Modular.to.pop();
                   },

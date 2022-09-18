@@ -189,8 +189,8 @@ class _AddProdutoPageState extends State<AddProdutoPage> {
                   ),
                   Container(
                     width: MediaQuery.of(context).size.width,
-                    child: RaisedButton(
-                      color: Theme.of(context).primaryColor,
+                    child: ElevatedButton(
+                      // color: Theme.of(context).primaryColor,
                       onPressed: () async {
                         var result = await controller.salvar();
 
@@ -204,7 +204,7 @@ class _AddProdutoPageState extends State<AddProdutoPage> {
                                 content:
                                     Text("Erro ao tentar salvar o produto!"),
                                 actions: <Widget>[
-                                  FlatButton(
+                                  ElevatedButton(
                                     child: Text("Fechar"),
                                     onPressed: () {
                                       Modular.to.pop();

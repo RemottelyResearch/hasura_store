@@ -28,17 +28,17 @@ class TokenInterceptor extends Interceptor {
   Future<void> onDisconnected() {}
 
   @override
-  Future onError(HasuraError request) async {
+  Future onError(HasuraError request, HasuraConnect connect) async {
     return request;
   }
 
   @override
-  Future<Request> onRequest(Request request) async {
-    var user = await auth.currentUser();
-    var token = await user.getIdToken(refresh: true);
+  Future<Request> onRequest(Request request, HasuraConnect connect) async {
+    final User user = await auth.currentUser;
+    final String token = await user.getIdToken(true);
     if (token != null) {
       try {
-        request.headers["Authorization"] = "Bearer ${token.token}";
+        request.headers["Authorization"] = "Bearer ${token}";
         return request;
       } catch (e) {
         return null;
@@ -49,7 +49,7 @@ class TokenInterceptor extends Interceptor {
   }
 
   @override
-  Future onResponse(Response data) async {
+  Future onResponse(Response data, HasuraConnect connect) async {
     return data;
   }
 

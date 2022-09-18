@@ -7,27 +7,40 @@ environment:
   sdk: ">=2.3.0 <3.0.0"
 
 dependencies:
-  oktoast: ^2.3.2
-  firebase_auth: ^0.16.1
-  find_dropdown: ^0.2.0
-  git: ^1.0.1
-  hasura_cache_interceptor: 1.0.0-dev.4
-  hive_cache_interceptor: 1.0.0-dev.2
-  hasura_connect: 2.0.0-dev.17.8
-  dio: ^3.0.10
-  flutter_mobx: ^1.1.0+2
-  mobx: ^1.2.1+2
-  flutter_modular: ^2.0.0+1
   flutter:
     sdk: flutter
+  oktoast: ^3.3.0
+  firebase_auth: ^3.9.0
+  find_dropdown:
+  git:
+  hasura_cache_interceptor:
+  hive_cache_interceptor: ^1.0.0-dev.4
+  hasura_connect: ^4.0.0+4
+  dio: ^4.0.6
+  flutter_mobx:
+  mobx:
+  flutter_modular:
+  # oktoast: ^2.3.2
+  # firebase_auth: ^0.16.1
+  # find_dropdown: ^0.2.0
+  # git: ^1.0.1
+  # hasura_cache_interceptor: 1.0.0-dev.4
+  # hive_cache_interceptor: 1.0.0-dev.2
+  # hasura_connect: 2.0.0-dev.17.8
+  # dio: ^3.0.10
+  # flutter_mobx: ^1.1.0+2
+  # mobx: ^1.2.1+2
+  # flutter_modular: ^2.0.0+1
+
+
 
 dev_dependencies:
-  effective_dart: ^1.2.4
-  mockito: ^4.1.1
-  build_runner: ^1.10.0
-  mobx_codegen: ^1.1.0+1
-  flutter_test:
-    sdk: flutter
+  # effective_dart: ^1.2.4
+  # mockito: ^4.1.1
+  # build_runner: ^1.10.0
+  # mobx_codegen: ^1.1.0+1
+  # flutter_test:
+  #   sdk: flutter
 
 scripts:
   watch: flutter pub run build_runner watch
